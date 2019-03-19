@@ -30,6 +30,12 @@ var wins =0;
 var losses =0;
 var guesses =0;
 
+//variables that hold references to the place in HTML
+var userChoiceText = document.getElementById("userchoice-text");
+var winText = document.getElementById("wins-text");
+var lossesText = document.getElementById("losses-text");
+var guessesText = document.getElementById("guess-text");
+
 //whenever player presses a key
 document.onkeyup = function (event) {
     //what key is pressed 
