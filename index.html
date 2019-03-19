@@ -24,18 +24,32 @@
 <script type="text/javascript">
 
 var playerChoices = [ "a", "e", "i","o", "u"];
+
+//variables to hold number of win, losses, and guesses
 var wins =0;
 var losses =0;
+var guesses =0;
 
+//whenever player presses a key
 document.onkeyup = function (event) {
-
+    //what key is pressed 
     var userGuess = event.key;
-    console.log ("userGuess =", userGuess);
-    if (userGuess == "a", "e", "i", "o", "u" || userguess == "t", "s", "r",)
+    //logic for the outcome of game
+    if (userGuess == "a", "e", "i", "o", "u" || userguess == "t", "s", "r") {
+      
+    }
         playerChoiceId = document.getElementById ("player-choice");
         playerChoiceId.textContent = userGuess;
+
+
+        //Display user guesses of letters
+        userChoiceText.textContent = " You choose: " + userGuess;
+
+        winsText.textContent = "wins: " + wins;
+        lossesText.textContent = "losses: " + losses; 
+        guessestext.textContent = "User guesses: " + guesses;
         
-}
+};
 
 </script>
 
