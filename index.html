@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<title> Guessing Game</title>
+
+<head>
+    <meta charset="UTF-8">
+    <h1>
+        The Psychic Game
+    </h1>
+</head>
+
+<body>
+
+<div id ="game">
+    
+    <p> Player Guess: <span id="player-choice"></span></p>
+    <hr />
+    <p>Wins: <span id="wins"></span></p>
+    <p>Losses: <span id="loses"></span></p>
+    <p>Guesses Left: <span id="guesses"></span></p>
+</div>
+
+<script type="text/javascript">
+
+var playerChoices = [ "a", "e", "i","o", "u"];
+var wins =0;
+var losses =0;
+
+document.onkeyup = function (event) {
+
+    var userGuess = event.key;
+    console.log ("userGuess =", userGuess);
+    if (userGuess == "a", "e", "i", "o", "u" || userguess == "t", "s", "r",)
+        playerChoiceId = document.getElementById ("player-choice");
+        playerChoiceId.textContent = userGuess;
+        
+}
+
+</script>
+
+</body>
+</html>
