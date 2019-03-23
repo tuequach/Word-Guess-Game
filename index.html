@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
 
-<title> Guessing Game</title>
+<title>HangMan</title>
 
 <head>
     <meta charset="UTF-8">
     <h1>
-        The Psychic Game
+        League of Legends Champions Hangman
     </h1>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
 </head>
 
 <body>
 
 <div id ="game">
+    <h2>Guess Which Champions for League of Legends</h2>
     
     <p> Player Guess: <span id="player-choice"></span></p>
     <hr />
+    <p> Letter Guessed by Player:</p>
+    <hr/>
     <p>Wins: <span id="wins"></span></p>
     <p>Losses: <span id="loses"></span></p>
     <p>Guesses Left: <span id="guesses"></span></p>
@@ -23,7 +28,34 @@
 
 <script type="text/javascript">
 
-var playerChoices = [ "a", "e", "i","o", "u"];
+var playerChoices = [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z",
+        ];
 
 //variables to hold number of win, losses, and guesses
 var wins =0;
@@ -36,18 +68,18 @@ var winText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var guessesText = document.getElementById("guess-text");
 
+var game = new game();
 //whenever player presses a key
 document.onkeyup = function (event) {
     //what key is pressed 
     var userGuess = event.key;
     //logic for the outcome of game
-    if (userGuess == "a", "e", "i", "o", "u" || userguess == "t", "s", "r") {
-      
+    if (validGuess.includes(usersGuess) && (validGuess.includes(userchoice) && 
+    {
+      console.log(userchoice());
     }
         playerChoiceId = document.getElementById ("player-choice");
         playerChoiceId.textContent = userGuess;
-
-
         //Display user guesses of letters
         userChoiceText.textContent = " You choose: " + userGuess;
 
@@ -56,6 +88,8 @@ document.onkeyup = function (event) {
         guessestext.textContent = "User guesses: " + guesses;
         
 };
+
+
 
 </script>
 
