@@ -74,8 +74,7 @@ document.onkeyup = function (event) {
     //what key is pressed 
     var userGuess = event.key;
     //logic for the outcome of game
-    if (validGuess.includes(usersGuess) && (validGuess.includes(userchoice) && 
-    {
+    userGuess === GuessedRight ? console.log("You've guessed" + userGuess.)
       console.log(userchoice());
     }
         playerChoiceId = document.getElementById ("player-choice");
@@ -89,6 +88,9 @@ document.onkeyup = function (event) {
         
 };
 
+function userGuess () {
+    console.log(userGuess);
+}
 
 
 </script>
