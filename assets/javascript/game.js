@@ -19,6 +19,22 @@ var random = Math.floor(Math.random() * words.length);
 var pickingWord = word[random];
 var pickingLetters = pickingWord.split("");
 
+// Replaying or reseting the Game 
+const resetGame = () => {
+    guesses = 15; 
+    letterUsed =[];
+    wordPickedLastGame = pickingWord;
+    word.splice(random, 1);
+
+    random = Math.floor(Math.random() * words.length);
+    pickingWord = word[random];
+    pickingLetters = pickingWord.split("");
+
+    word.push(wordPickedLastGame)
+
+    generateplayerChoice(); 
+}
+
 //function runs whenever user presses a key
 document.onkeyup = function (event) {
     var userGuess = event.key;
@@ -29,7 +45,6 @@ document.onkeyup = function (event) {
             playerChoice[i] = userGuess;
         }
     }
-    
     if (pickingWord == playerChoice.join("")) {
         gameText.textContent = "You've Won Summoner Rift by Guessing the Correct Champion.";
         wins++; resetGame();
@@ -41,7 +56,8 @@ document.onkeyup = function (event) {
     }
     }
 
-    
+
+
 
 
     }
@@ -49,7 +65,7 @@ document.onkeyup = function (event) {
     }
 }
 
-//function runs whenever the user presses a key
+//function (from rps game)runs whenever the user presses a key for reference
 document.onkeyup = function (event) {
     var userChoice = event.key;
     console.log("userGuess = ", userGuess);
