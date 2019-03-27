@@ -71,46 +71,12 @@ document.onkeyup = function (event) {
     } else {
         guesses--;
     }
-    }
+ }
 
-
-
-
-
-    }
-    }
-    }
+// updated screen 
+playerChoiceText.textContent = "" + playerChoice.join(" ");
+guessesText.textContent = "" +  guesses;
+letterUsedText.textContent = "" + letterUsed;
+winsText.textContent = "" + wins;
+lossText.textContent = "" + loss;
 }
-
-//function (from rps game)runs whenever the user presses a key for reference
-document.onkeyup = function (event) {
-    var userChoice = event.key;
-    console.log("userGuess = ", userGuess);
-
-    if (userGuess === "userChoice") {
-        playerChoiceId = document.getElementById("player-choice");
-        computerChoiceId = document.getElementById("computer-choice");
-        playerChoiceId.textContent = userGuess;
-
-    var computerGuess = 
-        words[Math.floor(Math.random() * words.length)];
-
-        computerChoiceId.textContent = computerGuess;
-         if (userGuess == computerGuess) {
-            wins++;
-         }
-
-      //Winning Screen
-    winId = document.getElementById("wins");
-         losesId = document.getElementById("loses");
-         winId.textContent = wins;
-         losesId.textContent = loses;
-       } else {
-         console.log("userGuess = ", userGuess);  
-    }
-};
-
-</script>
-
-</body>
-</html>
