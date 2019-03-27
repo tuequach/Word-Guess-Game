@@ -1,5 +1,5 @@
 // defining all possible variables
-var words = ["teemo", "ahri", "graves", "annie", "alistar",
+const words = ["teemo", "ahri", "graves", "annie", "alistar",
 "blitzcrank","ezreal", "nocturne", "katarina"];
 var wins =0;
 var loss =0;
@@ -15,7 +15,18 @@ var lossText = document.geetElementbyId("loss-text");
 var gameText = document.getElementbyId("game-text");
 
 // Start of the game
+var random = Math.floor(Math.random() * words.length);
+var pickingWord = word[random];
+var pickingLetters = pickingWord.split("");
 
+//function runs wheneever user presses a key
+document.onkeyup = function (event) {
+    var userGuess = event.key;
+    letterUsed.push(userGuess);
+
+    for (var i=0, i < pickingWord.length; i++);
+    
+}
 
 //function runs whenever the user presses a key
 document.onkeyup = function (event) {
