@@ -1,26 +1,26 @@
 // defining all possible variables
-const words = ["teemo", "ahri", "graves", "annie", "alistar",
+var words = ["teemo", "ahri", "graves", "annie", "alistar",
 "blitzcrank","ezreal", "nocturne", "katarina"];
-const wins =0;
-const loss =0;
-const guesses = 15;
-const playerChoice = [];
-const letterUsed=[];
+var wins =0;
+var loss =0;
+var guesses = 15;
+var playerChoice = [];
+var letterUsed=[];
 
-const playerChoiceText = document.getElementbyId("playerChoice-text");
-const guessesText = document.getElementbyId("guesses-text");
-const letterUsedText = document.getElementbyId("letterUsed-text");
-const winsText = document.getElementbyId("wins-text");
-const lossText = document.geetElementbyId("loss-text");
-const gameText = document.getElementbyId("game-text");
+var playerChoiceText = document.getElementById("playerChoice-text");
+var guessesText = document.getElementById("guesses-text");
+var letterUsedText = document.getElementById("letterUsed-text");
+var winsText = document.getElementById("wins-text");
+var lossText = document.getElementById("loss-text");
+var gameText = document.getElementById("game-text");
 
-// Start of the game
-const random = Math.floor(Math.random() * words.length);
-const pickingWord = word[random];
-const pickingLetters = pickingWord.split("");
+// Start of the game and choosing random words
+var random = Math.floor(Math.random() * words.length);
+var pickingWord = words[random];
+var pickingLetters = pickingWord.split("");
 
 // Replaying or reseting the Game 
-const resetGame = () => {
+var resetGame = () => {
     guesses = 15; 
     letterUsed =[];
     wordPickedLastGame = pickingWord;
@@ -30,21 +30,21 @@ const resetGame = () => {
     pickingWord = word[random];
     pickingLetters = pickingWord.split("");
 
-    word.push(wordPickedLastGame)
+    words.push(wordPickedLastGame)
 
     generateplayerChoice(); 
 }
 
 //generating playerchoice and by events
-const creatingPlayerChoice = () => {
+var creatingplayerChoice = function () {
     playerChoice =[];
 for (var i =0; i < pickingWord.length; i++) {
-    playerChoice.push("__");
+    playerChoice.push("_");
 }
     return playerChoice;
 }
 
-creatingPlayerChoice();
+creatingplayerChoice();
 
 playerChoiceText.textContent = "" + playerChoice.join(" ");
 guessesText.textContent = "" +  guesses;
@@ -54,10 +54,10 @@ lossText.textContent = "" + loss;
 
 //function runs whenever user presses a key
 document.onkeyup = function (event) {
-    const userGuess = event.key;
+    var userGuess = event.key;
     letterUsed.push(userGuess);
 
-    for (const i=0; i < pickingLetters.length; i++) {
+    for (var i=0; i < pickingLetters.length; i++) {
         if (pickingLetters[i] == userGuess.toString()) {
             playerChoice[i] = userGuess;
         }
@@ -71,7 +71,7 @@ document.onkeyup = function (event) {
     } else {
         guesses--;
     }
- }
+ 
 
 // updated screen 
 playerChoiceText.textContent = "" + playerChoice.join(" ");
