@@ -1,23 +1,23 @@
 // defining all possible variables
 const words = ["teemo", "ahri", "graves", "annie", "alistar",
 "blitzcrank","ezreal", "nocturne", "katarina"];
-var wins =0;
-var loss =0;
-var guesses = 15;
-var playerChoice = [];
-var letterUsed=[];
+const wins =0;
+const loss =0;
+const guesses = 15;
+const playerChoice = [];
+const letterUsed=[];
 
-var playerChoiceText = document.getElementbyId("playerChoice-text");
-var guessesText = document.getElementbyId("guesses-text");
-var letterUsedText = document.getElementbyId("letterUsed-text");
-var winsText = document.getElementbyId("wins-text");
-var lossText = document.geetElementbyId("loss-text");
-var gameText = document.getElementbyId("game-text");
+const playerChoiceText = document.getElementbyId("playerChoice-text");
+const guessesText = document.getElementbyId("guesses-text");
+const letterUsedText = document.getElementbyId("letterUsed-text");
+const winsText = document.getElementbyId("wins-text");
+const lossText = document.geetElementbyId("loss-text");
+const gameText = document.getElementbyId("game-text");
 
 // Start of the game
-var random = Math.floor(Math.random() * words.length);
-var pickingWord = word[random];
-var pickingLetters = pickingWord.split("");
+const random = Math.floor(Math.random() * words.length);
+const pickingWord = word[random];
+const pickingLetters = pickingWord.split("");
 
 // Replaying or reseting the Game 
 const resetGame = () => {
@@ -35,12 +35,29 @@ const resetGame = () => {
     generateplayerChoice(); 
 }
 
+//generating playerchoice and by events
+const creatingPlayerChoice = () => {
+    playerChoice =[];
+for (var i =0; i < pickingWord.length; i++) {
+    playerChoice.push("__");
+}
+    return playerChoice;
+}
+
+creatingPlayerChoice();
+
+playerChoiceText.textContent = "" + playerChoice.join(" ");
+guessesText.textContent = "" +  guesses;
+letterUsedText.textContent = "" + letterUsed;
+winsText.textContent = "" + wins;
+lossText.textContent = "" + loss;
+
 //function runs whenever user presses a key
 document.onkeyup = function (event) {
-    var userGuess = event.key;
+    const userGuess = event.key;
     letterUsed.push(userGuess);
 
-    for (var i=0; i < pickingLetters.length; i++) {
+    for (const i=0; i < pickingLetters.length; i++) {
         if (pickingLetters[i] == userGuess.toString()) {
             playerChoice[i] = userGuess;
         }
