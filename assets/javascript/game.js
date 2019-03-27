@@ -19,13 +19,34 @@ var random = Math.floor(Math.random() * words.length);
 var pickingWord = word[random];
 var pickingLetters = pickingWord.split("");
 
-//function runs wheneever user presses a key
+//function runs whenever user presses a key
 document.onkeyup = function (event) {
     var userGuess = event.key;
     letterUsed.push(userGuess);
 
-    for (var i=0, i < pickingWord.length; i++);
+    for (var i=0; i < pickingLetters.length; i++) {
+        if (pickingLetters[i] == userGuess.toString()) {
+            playerChoice[i] = userGuess;
+        }
+    }
     
+    if (pickingWord == playerChoice.join("")) {
+        gameText.textContent = "You've Won Summoner Rift by Guessing the Correct Champion.";
+        wins++; resetGame();
+    } else if (guesses == 0) {
+        gameText.textContent = "Defeated by Minions, You've Lost This Round.";
+        resetGame();
+    } else {
+        guesses--;
+    }
+    }
+
+    
+
+
+    }
+    }
+    }
 }
 
 //function runs whenever the user presses a key
