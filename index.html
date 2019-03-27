@@ -13,87 +13,25 @@
 </head>
 
 <body>
+    <header> 
+        <img src = "assets/images/leagueoflegends.png" class ="center">
+        <br>
+    </header>
 
 <div id ="game">
     <h2>Guess Which Champions for League of Legends</h2>
     
-    <p> Player Guess: <span id="player-choice"></span></p>
+    <p> Player Guess: <span id="playerChoice-text"></span></p>
     <hr />
-    <p> Letter Guessed by Player:</p>
+    <p> Letter Guessed by Player: <span id= "letterUsed-text"></span></p>
     <hr/>
-    <p>Wins: <span id="wins"></span></p>
-    <p>Losses: <span id="loses"></span></p>
-    <p>Guesses Left: <span id="guesses"></span></p>
+    <p>Wins: <span id="wins-text"></span></p>
+    <p>Losses: <span id="loss-text"></span></p>
+    <p>Guesses Left: <span id="guesses-text"></span></p>
 </div>
 
-<script type="text/javascript">
 
-var playerChoices = [
-          "A",
-          "B",
-          "C",
-          "D",
-          "E",
-          "F",
-          "G",
-          "H",
-          "I",
-          "J",
-          "K",
-          "L",
-          "M",
-          "N",
-          "O",
-          "P",
-          "Q",
-          "R",
-          "S",
-          "T",
-          "U",
-          "V",
-          "W",
-          "X",
-          "Y",
-          "Z",
-        ];
-
-//variables to hold number of win, losses, and guesses
-var wins =0;
-var losses =0;
-var guesses =0;
-
-//variables that hold references to the place in HTML
-var userChoiceText = document.getElementById("userchoice-text");
-var winText = document.getElementById("wins-text");
-var lossesText = document.getElementById("losses-text");
-var guessesText = document.getElementById("guess-text");
-
-var game = new game();
-//whenever player presses a key
-document.onkeyup = function (event) {
-    //what key is pressed 
-    var userGuess = event.key;
-    //logic for the outcome of game
-    userGuess === GuessedRight ? console.log("You've guessed" + userGuess.)
-      console.log(userchoice());
-    }
-        playerChoiceId = document.getElementById ("player-choice");
-        playerChoiceId.textContent = userGuess;
-        //Display user guesses of letters
-        userChoiceText.textContent = " You choose: " + userGuess;
-
-        winsText.textContent = "wins: " + wins;
-        lossesText.textContent = "losses: " + losses; 
-        guessestext.textContent = "User guesses: " + guesses;
-        
-};
-
-function userGuess () {
-    console.log(userGuess);
-}
-
-
-</script>
+<script src= "assets/javascript/game.js"></script>
 
 </body>
 </html>
