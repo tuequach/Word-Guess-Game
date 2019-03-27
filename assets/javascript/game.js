@@ -16,11 +16,6 @@ var gameText = document.getElementbyId("game-text");
 
 // Start of the game
 
-var random = Math.floor(Math.random() * words.length);
-var pickingWord = word[random];
-var pickingLetters = pickingWord.split("");
-
-
 
 //function runs whenever the user presses a key
 document.onkeyup = function (event) {
