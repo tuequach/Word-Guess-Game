@@ -35,6 +35,7 @@ h1 {
 body {
     line-height: 1;
     background-color:gray;
+    text-align: center;
 }
 ol, ul {
 	list-style: none;

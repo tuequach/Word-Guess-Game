@@ -64,7 +64,8 @@ document.onkeyup = function (event) {
     }
     if (pickingWord == playerChoice.join("")) {
         gameText.textContent = "You've Won Summoner Rift by Guessing the Correct Champion.";
-        wins++; resetGame();
+        wins++; 
+        resetGame();
     } else if (guesses == 0) {
         gameText.textContent = "Defeated by Minions, You've Lost This Round.";
         resetGame();
