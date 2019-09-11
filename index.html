@@ -1,38 +1,63 @@
 <!DOCTYPE html>
-<html>
-
-<title>LOL HangMan</title>
+<html lang= "en-us">
 
 <head>
     <meta charset="UTF-8">
-    <h1>
-        League of Legends Champions Hangman
-    </h1>
+
+    <!---Setting viewport for App------->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!----Link to reset.css----------->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
+    <!-----Bringing in Bootstrap------->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-N8DsABZCqc1XWbg/bAlIDk7AS/yNzT5fcKzg/TwfmTuUqZhGquVmpb5VvfmLcMzp" crossorigin="anonymous">
+    
+    <!---Link to CSS file---->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <!---Google font api----->
+
+    <!----title of the webpage-->
+    <title>Word Guess Game</title>
+    
 </head>
 
 <body>
-    <header> 
-        <img src = "assets/images/leagueoflegends.png" class ="center">
-        <br>
-    </header>
+    
+    <div class= "row justify-content ceter">
+        <div class="container">
+            <h1>League of Legends Champions Hangman Game</h1>
+        </div>
+    </div>
 
-<div class ="game">
-    <h2>Guess The Name of Which League of Legends Champion Shown In The Picture</h2>
-    <hr/>
-    <p> Player Guess: <span id="playerChoice-text"></span></p>
-    <hr />
-    <p> Letter Guessed by Player: <span id= "letterUsed-text"></span></p>
-    <hr/>
-    <p>Wins: <span id="wins-text"></span></p>
-    <p>Losses: <span id="loss-text"></span></p>
-    <p>Guesses: <span id="guesses-text"></span></p>
-    <hr/>
-    <p> <span id= "game-text"></span></p>
+        <div class = "row justify-content center align-items-center">
+            <div class= "col-md-6">
+            </div>
+
+    <div class = "row justify-content center">
+            <div class= "col-md" id="scoreboard">
+                <h2>Guess The Name of Which League of Legends Champion Shown In The Picture</h2>
+                <hr/>
+                <p> Player Guess: <span id="playerChoice-text"></span></p>
+                <hr />
+                <p> Letter Guessed by Player: <span id= "letterUsed-text"></span></p>
+                <hr/>
+                <p>Wins: <span id="wins-text"></span></p>
+                <p>Losses: <span id="loss-text"></span></p>
+                <p>Guesses: <span id="guesses-text"></span></p>
+                <hr/>
+                <p> <span id= "game-text"></span></p>
+            </div>
+            </div>
+        </div>
+   
+
+
 </div>
-
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src= "assets/javascript/game.js"></script>
 
 </body>

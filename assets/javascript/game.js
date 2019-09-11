@@ -1,8 +1,8 @@
-// defining all possible variables
+// defining all possible variables in global scope
 var words = ["teemo", "ahri", "graves", "annie", "alistar",
 "blitzcrank","ezreal", "nocturne", "katarina"];
 var wins =0;
-var loss =0;
+var losses =0;
 var guesses = 15;
 var playerChoice = [];
 var letterUsed=[];
@@ -19,8 +19,8 @@ var random = Math.floor(Math.random() * words.length);
 var pickingWord = words[random];
 var pickingLetters = pickingWord.split("");
 
-// Replaying or reseting the Game 
-var resetGame = () => {
+// Replaying or playing a new game
+var newGame = () => {
     guesses = 15; 
     letterUsed =[];
     wordPickedLastGame = pickingWord;
@@ -50,7 +50,7 @@ playerChoiceText.textContent = "" + playerChoice.join(" ");
 guessesText.textContent = "" +  guesses;
 letterUsedText.textContent = "" + letterUsed;
 winsText.textContent = "" + wins;
-lossText.textContent = "" + loss;
+lossText.textContent = "" + losses;
 
 //function runs whenever user presses a key
 document.onkeyup = function (event) {
@@ -65,10 +65,10 @@ document.onkeyup = function (event) {
     if (pickingWord == playerChoice.join("")) {
         gameText.textContent = "You've Won Summoner Rift by Guessing the Correct Champion.";
         wins++; 
-        resetGame();
+        newGame();
     } else if (guesses == 0) {
         gameText.textContent = "Defeated by Minions, You've Lost This Round.";
-        resetGame();
+        newGame();
     } else {
         guesses--;
     }
@@ -79,5 +79,5 @@ playerChoiceText.textContent = "" + playerChoice.join(" ");
 guessesText.textContent = "" +  guesses;
 letterUsedText.textContent = "" + letterUsed;
 winsText.textContent = "" + wins;
-lossText.textContent = "" + loss;
+lossText.textContent = "" + losses;
 }
