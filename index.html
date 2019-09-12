@@ -17,39 +17,92 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     
     <!---Google font api----->
-
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Rubik+Mono+One&display=swap" rel="stylesheet">
     <!----title of the webpage-->
     <title>Word Guess Game</title>
     
 </head>
 
 <body>
-    
-        <div class="container">
-            <h1>League of Legends Champions Hangman Game</h1>
+    <div class="container">
+
+        <div class="row justify-content center">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<                <img src="assets/images/title.png" class=league alt="Title" id="title">
+>                </div>
+            </div>
+
+    <div class = "row justify-content center align-items-around">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"> 
+
+            <!---instruction for the game----->
+            <div class= "description-box">
+                <div class id="instruction">
+                    <p>Press Any Key To Play!</p>
+                </div>
+                <p> Try to guess the current champions, do it before your team is wiped out by minions!</p>
+            </div>
+
+            <div class= "score" id= "stats">
+                <p> Wins: <span id="wins"></span></p>
+                <p> Losses: <span id="losses"></span></p>
+
+                <p> Guesses Remaining: <span id="guessesLeft"></span></p>
+                <p> Letters Guessed: <span id="lettersPicked"></span></p>
+                
+            
+            </div>
+
         </div>
     </div>
 
-        <div class = "row justify-content center align-items-center">
-            <div class= "col-md-6">
-            </div>
-
-    <div class = "row justify-content center">
-            <div class= "col-md" id="scoreboard">
-                <h2>Guess The Name of Which League of Legends Champion Shown In The Picture</h2>
-                <hr/>
-                <p> Player Guess: <span id="playerChoice-text"></span></p>
-                <hr />
-                <p> Letter Guessed by Player: <span id= "letterUsed-text"></span></p>
-                <hr/>
-                <p>Wins: <span id="wins-text"></span></p>
-                <p>Losses: <span id="loss-text"></span></p>
-                <p>Guesses: <span id="guesses-text"></span></p>
-                <hr/>
-                <p> <span id= "game-text"></span></p>
-            </div>
-            </div>
+    <div class="row justify-content-center" id="champions">
+            
+        <div class = "col">
+            <img src="assets/images/champions/ahri.png" class=champions alt="Ahri" id="ahri">
         </div>
+
+        <div class= "col">
+            <img src="assets/images/champions/annie.png" class=champions alt="Annie" id="annie">
+        </div>
+        
+        <div class= "col">
+            <img src="assets/images/champions/aatrox.png" class=champions alt="Aatrox" id="aatrox">
+        </div>
+
+        <div class= "col">
+            <img src="assets/images/champions/azir.png" class=champions alt="Azir" id="azir">
+        </div>
+
+        <div class= "col">
+            <img src="assets/images/champions/blitzcrank.png" class=champions alt="Blitzcrank" id="blitzcrank">
+        </div>
+        
+        <div class= "col">
+            <img src="assets/images/champions/draven.png" class=champions alt="Draven" id="draven">
+        </div>
+
+        <div class= "col">
+            <img src="assets/images/champions/fiddlesticks.png" class=champions alt="Fiddlesticks" id="fiddlesticks">
+        </div>
+
+        <div class= "col">
+            <img src="assets/images/champions/garen.png" class=champions alt="Garen" id="garen">
+        </div>
+
+        <div class= "col">
+            <img src="assets/images/champions/jihn.png" class=champions alt="Jihn" id="jihn">
+        </div>
+
+        <div class= "col">
+            <img src="assets/images/champions/jinx.png" class=champions alt="Jinx" id="jinx">
+        </div>
+
+        </div>
+    </div>
+        
+
+
    
 
 

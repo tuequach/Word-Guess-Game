@@ -1,6 +1,17 @@
+#title 
+{
+    width: 80%;
+    margin: 10px;
+    padding: auto;
+    border-style: dashed;
+    border-color: black;
+    top: -2px;
+    align-content: center;
+
+}
 body
 {
-    background-image: url("../images/background_img.jpg");
+    background-image: url("../images/background_2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -8,11 +19,13 @@ body
 }
 h1 
 {
-    font-size: 50px;
+    font-size: 20px;
     color: black;
     padding: 1px;
     text-align:center;
     margin-bottom: 50px;
+    font-family: 'Rubik Mono One', sans-serif;
+
 } 
 h2 
 {
@@ -21,4 +34,15 @@ h2
     text-align: center;
     font-size: 24px;
     color: black; 
+}
+#instruction, #stats {
+    color: white;
+}
+#ahri, #annie, #aatrox, #azir, #blitzcrank, #draven,
+#fiddlesticks, #garen, #jihn, #jinx
+{
+    display: block;
+    width: auto;
+    height: auto;
+    margin: auto;
 }
