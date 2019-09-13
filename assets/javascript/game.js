@@ -21,7 +21,7 @@ var losses =0;
 var guesses = 15;
 
 //newGame function that allows randomize of the champions array
-function newGame () {
+function newGame() {
     currentWord = champions[Math.floor(Math.random() * champions.length)];
         console.log(currentWord);
 
@@ -96,7 +96,7 @@ else {
     }
 }
 
-var completeGame = function() {
+function completeGame() {
     //updating the html game stats
     document.getElementById("word").innerHTML = playerChoice.join(" ");
     document.getElementById("guessesLeft").innerHTML = "Number of Guesses left: " + " " + guesses;
