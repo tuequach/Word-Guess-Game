@@ -3,33 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-
     <!---Setting viewport for App------->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!----Link to reset.css----------->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!-----Bringing in Bootstrap------->
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-N8DsABZCqc1XWbg/bAlIDk7AS/yNzT5fcKzg/TwfmTuUqZhGquVmpb5VvfmLcMzp" crossorigin="anonymous">
-    
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-N8DsABZCqc1XWbg/bAlIDk7AS/yNzT5fcKzg/TwfmTuUqZhGquVmpb5VvfmLcMzp" crossorigin="anonymous">
     <!---Link to CSS file---->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!---Google font api----->
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Rubik+Mono+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Rubik+Mono+One&display=swap" rel="stylesheet">
     <!----title of the webpage-->
-    <title>Word Guess Game</title>
+        <title>Word Guess Hangman Game</title>
     
 </head>
 
 <body>
     <div class="container">
 
-        <div class="row justify-content-center align-items-center" id="title" >
-            <div class="col">
+        <div class="row justify-content-center">
                 <img src="assets/images/title.png" class=title alt="Title">
-            </div>
         </div>
 
         <div class = "row justify-content-center" id ="stat">
@@ -38,16 +31,14 @@
                 <div class= "description-box" id="instruction">
                     <h1>Press Any Key To Play!<h1>
                     <p> 
-                        You've been summoned to the Summoner Rift!
-                        Try to guess the current Champion within the selection to win the game!
-                        Do it before your team is wiped out by minions!
+                        You've been summoned to the Howling Abyss!
+                        Try to guess the current Champion to win the game!
+                        Do it before your Poros are wiped out by minions!
                     </p>
-
-                    <h1>Current Champion: </h1>
-                    <h2 id="word"></h2>
+                </div>
             </div>
-            </div>
-
+                    
+            
             <div class="col">
                 <div class= "score" id= "stats">
                     <h1>
@@ -56,11 +47,51 @@
                         <p id="guessesLeft"> Guesses Remaining:</p> 
                         <p id ="lettersPicked"> Letters Guessed: </p>   
                     </h1>
+                </div>
             </div>
 
         </div>
-    
 
+        <div class="row justify-content-center">
+            <div class="col">
+                <h1>Current Champion: </h1>
+                <h2 id="word"></h2>
+            </div>
+
+            <div class="col justify-content-center">
+                <img src="assets/images/poros/poro1.gif" class=poros alt="Poro1" id="poro1">
+                <img src="assets/images/poros/poro2.gif" class=poros alt="Poro2" id="poro2">
+                <img src="assets/images/poros/poro3.gif" class=poros alt="Poro3" id="poro3">
+                <img src="assets/images/poros/poro4.gif" class=poros alt="Poro4" id="poro4">
+                <img src="assets/images/poros/poro5.gif" class=poros alt="Poro5" id="poro5">
+                <img src="assets/images/poros/poro6.gif" class=poros alt="Poro6" id="poro6">
+                <img src="assets/images/poros/poroking.gif" class=poros alt="Poroking" id="poroking">
+                <img src="assets/images/poros/poroking2.gif" class=poros alt="Poroking2" id="poroking2">
+            </div>
+        </div>
+
+        <div class="row" id="championlist">
+            <div class= "col">
+                <img src="assets/images/champions/draven.png" class=champions alt="Draven" id="draven">
+            </div>
+            
+        <div class= "col">
+            <img src="assets/images/champions/fiddlesticks.png" class=champions alt="Fiddlesticks" id="fiddlesticks">
+        </div>
+        
+        <div class= "col">
+            <img src="assets/images/champions/garen.png" class=champions alt="Garen" id="garen">
+        </div>
+        
+        <div class= "col">
+            <img src="assets/images/champions/katarina.png" class=champions alt="Katarina" id="katarina">
+        </div>
+        
+        <div class= "col">
+            <img src="assets/images/champions/jinx.png" class=champions alt="Jinx" id="jinx">
+        </div>
+    </div>
+    
     <div class="row" id="championlist">
             
         <div class = "col">
@@ -76,39 +107,14 @@
         </div>
 
         <div class= "col">
-            <img src="assets/images/champions/azir.png" class=champions alt="Azir" id="azir">
+            <img src="assets/images/champions/rengar.png" class=champions alt="Rengar" id="rengar">
         </div>
 
-        <div class= "col">
-            <img src="assets/images/champions/blitzcrank.png" class=champions alt="Blitzcrank" id="blitzcrank">
-        </div>
-    </div>
-
-    <div class="row" id="championlist">
-        <div class= "col">
-            <img src="assets/images/champions/draven.png" class=champions alt="Draven" id="draven">
-        </div>
-
-        <div class= "col">
-            <img src="assets/images/champions/fiddlesticks.png" class=champions alt="Fiddlesticks" id="fiddlesticks">
-        </div>
-
-        <div class= "col">
-            <img src="assets/images/champions/garen.png" class=champions alt="Garen" id="garen">
-        </div>
-
-        <div class= "col">
-            <img src="assets/images/champions/jihn.png" class=champions alt="Jihn" id="jihn">
-        </div>
-
-        <div class= "col">
-            <img src="assets/images/champions/jinx.png" class=champions alt="Jinx" id="jinx">
-        </div>
     </div>
 
     <div class="row" id="championlist">
         <div class="col">
-            <img src="assets/images/champions/katarina.png" class=champions alt="Katarina" id="katarina">
+            <img src="assets/images/champions/jihn.png" class=champions alt="Jihn" id="jihn">
         </div>
 
         <div class="col">
@@ -120,22 +126,31 @@
         </div>
 
         <div class="col">
-            <img src="assets/images/champions/rengar.png" class=champions alt="Rengar" id="rengar">
+            <img src="assets/images/champions/zyra.png" class=champions alt="Zyra" id="zyra">
+        </div>
+
+        <div class="col">
+            <img src="assets/images/champions/vi.png" class=champions alt="Vi" id="vi">
+        </div>
+    </div>
+
+    <!-- <div class="row" id="championlist">
+        <div class="col">
+            <img src="assets/images/champions/veigar.png" class=champions alt="Veigar" id="veigar">
+        </div>
+
+        <div class="col">
+            <img src="assets/images/champions/teemo.png" class=champions alt="Teemo" id="teemo">
         </div>
 
         <div class="col">
             <img src="assets/images/champions/twitch.png" class=champions alt="Twitch" id="twitch">
         </div>
-    </div>
-
-    </div>
+    </div> -->
         
 
-
-   
-
-
-    </div>
+</div>
+ 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

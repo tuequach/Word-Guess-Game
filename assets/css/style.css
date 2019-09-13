@@ -1,13 +1,10 @@
-#title 
+.title 
 {
-    width: 80%;
+    width: 40%;
     margin: 10px;
-    padding: auto;
-    border-style: dashed;
-    border-color: black;
+    padding: 10px;
     top: -2px;
     align-content: center;
-
 }
 body
 {
@@ -19,18 +16,11 @@ body
 }
 #instruction, #stats 
 {
-    margin: 10px;
-    padding: 10px;
+    margin: 5px;
+    padding: 5px;
     align-content: center;
 }
-.title
-{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    
-}
+
 h1 
 {
     font-size: 14px;
@@ -39,22 +29,20 @@ h1
     text-align:center;
     margin-bottom: 50px;
     font-family: 'Press Start 2P', cursive;
-
 } 
 h2 
 {
     padding: 10px;
     margin: 10px;
     text-align: center;
-    font-size: 18px;
-    color: red; 
+    font-size: 24px;
+    color:gold; 
 }
-
-#ahri, #annie, #aatrox, #azir, #blitzcrank, #draven,
-#fiddlesticks, #garen, #jihn, #jinx
+.champtions
 {
     display: block;
     width: auto;
     height: auto;
     margin: auto;
+
 }

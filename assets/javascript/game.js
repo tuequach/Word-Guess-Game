@@ -1,7 +1,7 @@
 
 
 // defining all possible variables in global scope
-var champions = ["ahri", "annie", "aatrox", "azir", "blitzcrank", "draven", "fiddlesticks", "garen", "jihn", "jinx"];
+var champions = ["ahri", "annie", "aatrox", "draven", "fiddlesticks", "garen", "jihn", "jinx", "katarina", "rengar", "leona", "oriana", "zyra", "vi"];
 
 //store current word to be guessed as a string and another variable for actual letters 
 var currentWord = "";
@@ -18,7 +18,7 @@ var incorrectLetters=[];
 // stats for the game
 var wins =0;
 var losses =0;
-var guesses = 15;
+var guesses = 8;
 
 //newGame function that allows randomize of the champions array
 function newGame() {
@@ -34,20 +34,17 @@ function newGame() {
     //stats for game in the beginning
     incorrectLetters=[];
     playerChoice=[];
-    guesses= 15;
+    guesses= 8;
 
-        if (guesses = 15) {
-            document.getElementById("ahri").removeAttribute("style");
-            document.getElementById("annie").removeAttribute("style");
-            document.getElementById("aatrox").removeAttribute("style");
-            document.getElementById("azir").removeAttribute("style");
-            document.getElementById("blitzcrank").removeAttribute("style");
-            document.getElementById("draven").removeAttribute("style");
-            document.getElementById("fiddlesticks").removeAttribute("style");
-            document.getElementById("garen").removeAttribute("style");
-            document.getElementById("jihn").removeAttribute("style");
-            document.getElementById("jinx").removeAttribute("style");
-
+        if (guesses = 8) {
+            document.getElementById("poro1").removeAttribute("style");
+            document.getElementById("poro2").removeAttribute("style");
+            document.getElementById("poro3").removeAttribute("style");
+            document.getElementById("poro4").removeAttribute("style");
+            document.getElementById("poro5").removeAttribute("style");
+            document.getElementById("poro6").removeAttribute("style");
+            document.getElementById("poroking").removeAttribute("style");
+            document.getElementById("poroking2").removeAttribute("style");
         }
     
     for (i=0; i <numbers; i++) {
@@ -143,9 +140,39 @@ document.onkeyup = function(event) {
     computing(userGuess);
     completeGame();
 
-    if (guesses <= 14) {
-        document.getElementById("ahri").style.transform = "rotate (180eg)";
-        document.getElementById("ahri").style.opacity = "0.15";
-        }
-
+    if (guesses <= 7) {
+        document.getElementById("poro1").style.transform = "rotate (180eg)";
+        document.getElementById("poro1").style.opacity = "0.15";
     }
+
+    if (guesses <= 6) {
+        document.getElementById("poro2").style.transform = "rotate (180eg)";
+        document.getElementById("poro2").style.opacity = "0.15";
+    }
+
+    if (guesses <= 5) {
+        document.getElementById("poro3").style.transform = "rotate (180eg)";
+        document.getElementById("poro3").style.opacity = "0.15";
+    }
+
+    if (guesses <= 4) {
+        document.getElementById("poro4").style.transform = "rotate (180eg)";
+        document.getElementById("poro4").style.opacity = "0.15";
+    }
+    if (guesses <= 3) {
+        document.getElementById("poro5").style.transform = "rotate (180eg)";
+        document.getElementById("poro5").style.opacity = "0.15";
+    }
+    if (guesses <= 2) {
+        document.getElementById("poro6").style.transform = "rotate (180eg)";
+        document.getElementById("poro6").style.opacity = "0.15";
+    }
+    if (guesses <= 1) {
+        document.getElementById("poroking").style.transform = "rotate (180eg)";
+        document.getElementById("poroking").style.opacity = "0.15";
+    }
+    if (guesses <= 0) {
+        document.getElementById("poroking2").style.transform = "rotate (180eg)";
+        document.getElementById("poroking2").style.opacity = "0.15";
+    }
+}
