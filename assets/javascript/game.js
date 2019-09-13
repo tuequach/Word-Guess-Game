@@ -54,7 +54,7 @@ function newGame() {
 
     //changing html elements to display current information
     document.getElementById("word").innerHTML = playerChoice.join(" ");
-    document.getElementById("guessesLeft").innerHTML = "Number of Guesses left: " + " " + guesses;
+    document.getElementById("guessesLeft").innerHTML = "Number of Guesses: " + " " + guesses;
     document.getElementById("wins").innerHTML = "Wins: " + " " + wins;
     document.getElementById("losses").innerHTML = "Losses: " + " " + losses;
 }
@@ -96,7 +96,7 @@ else {
 function completeGame() {
     //updating the html game stats
     document.getElementById("word").innerHTML = playerChoice.join(" ");
-    document.getElementById("guessesLeft").innerHTML = "Number of Guesses left: " + " " + guesses;
+    document.getElementById("guessesLeft").innerHTML = "Number of Guesses: " + " " + guesses;
     document.getElementById("lettersPicked").innerHTML = "Letters Guessed:" + " " + incorrectLetters.join(" ");
 
 
@@ -104,7 +104,7 @@ function completeGame() {
     //won
     if (currentLetters.toString() == playerChoice.toString()) {
         wins++; 
-        alert("Yay! you've picked the right champion! '" + currentWord + "' correctly. You've won the Rift, play again?");
+        alert("Yay! you've picked the right champion! '" + currentWord + "' correctly. You've won the Rift, Play Again?");
         
 
         document.getElementById("wins").innerHTML = "Wins: " + " " + wins;
@@ -115,7 +115,7 @@ function completeGame() {
     //lost
     } else if (guesses == 0) { 
         losses++;
-        alert("You've ran out of guesses and the minions attack your base. The correct champions was '" + currentWord + "'. Try Again?");
+        alert(" The minions have killed all your poros and attack your base. The correct champion was '" + currentWord + "'. Try Again?");
     
         //update stats in html
 
@@ -140,38 +140,38 @@ document.onkeyup = function(event) {
     computing(userGuess);
     completeGame();
 
-    if (guesses <= 7) {
+    if (guesses <= 8) {
         document.getElementById("poro1").style.transform = "rotate (180eg)";
         document.getElementById("poro1").style.opacity = "0.15";
     }
 
-    if (guesses <= 6) {
+    if (guesses <= 7) {
         document.getElementById("poro2").style.transform = "rotate (180eg)";
         document.getElementById("poro2").style.opacity = "0.15";
     }
 
-    if (guesses <= 5) {
+    if (guesses <= 6) {
         document.getElementById("poro3").style.transform = "rotate (180eg)";
         document.getElementById("poro3").style.opacity = "0.15";
     }
 
-    if (guesses <= 4) {
+    if (guesses <= 5) {
         document.getElementById("poro4").style.transform = "rotate (180eg)";
         document.getElementById("poro4").style.opacity = "0.15";
     }
-    if (guesses <= 3) {
+    if (guesses <= 4) {
         document.getElementById("poro5").style.transform = "rotate (180eg)";
         document.getElementById("poro5").style.opacity = "0.15";
     }
-    if (guesses <= 2) {
+    if (guesses <= 3) {
         document.getElementById("poro6").style.transform = "rotate (180eg)";
         document.getElementById("poro6").style.opacity = "0.15";
     }
-    if (guesses <= 1) {
+    if (guesses <= 2) {
         document.getElementById("poroking").style.transform = "rotate (180eg)";
         document.getElementById("poroking").style.opacity = "0.15";
     }
-    if (guesses <= 0) {
+    if (guesses <= 1) {
         document.getElementById("poroking2").style.transform = "rotate (180eg)";
         document.getElementById("poroking2").style.opacity = "0.15";
     }

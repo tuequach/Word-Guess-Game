@@ -27,8 +27,8 @@ h1
     color: goldenrod;
     padding: 1px;
     text-align:center;
-    margin-bottom: 50px;
-    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 15px;
+    font-family: 'Press Start 2P', bold;
 } 
 h2 
 {
@@ -38,11 +38,14 @@ h2
     font-size: 24px;
     color:gold; 
 }
+#bottom
+{
+    margin-bottom: 25px;
+}
 .champtions
 {
     display: block;
     width: auto;
     height: auto;
     margin: auto;
-
 }
