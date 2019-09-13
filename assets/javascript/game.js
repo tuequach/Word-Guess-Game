@@ -104,7 +104,7 @@ function completeGame() {
     //won
     if (currentLetters.toString() == playerChoice.toString()) {
         wins++; 
-        alert("Yay! you've picked the right champion! '" + currentWord + "' correctly. You've won the Rift, Play Again?");
+        alert("Yay! you've picked the right champion! '" + currentWord + "' correctly. You've won the Abyss, Play Again?");
         
 
         document.getElementById("wins").innerHTML = "Wins: " + " " + wins;
